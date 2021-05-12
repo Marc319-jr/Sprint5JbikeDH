@@ -1,3 +1,5 @@
+const path = require('path');
+const file = path.resolve(__dirname, '../data/', 'usuarios.JSON');
 let fs =require('fs');
 const { Recoverable } = require('repl');
 let bcrypt = require('bcryptjs');
@@ -11,7 +13,7 @@ const controller = {
         res.render('./users/register')
     },
     create: (req,res) => {
-        let archivoUsuarios = fs.readFileSync('usuarios.JSON', {enconding: 'utf-8'});
+        let archivoUsuarios = fs.readFileSync(file, {enconding: 'utf-8'});
         let usuarios; 
         if (archivoUsuarios == "")
         {
@@ -40,7 +42,7 @@ const controller = {
         console.log("guarde un nuevo usuario");
 
         let usuariosJSON = JSON.stringify(usuarios);
-        fs.writeFileSync('usuarios.JSON',usuariosJSON);
+        fs.writeFileSync(file,usuariosJSON);
         res.redirect('/');
     }
 }
