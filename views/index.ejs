@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/header') %>
+        <section class="productos">
+
+            <div class="carusel">
+                <div class="titulo">
+                    <span class="hvr-hang">Top 4</span>
+                </div>
+                <% if(productos.length == 0 || productos == undefined ) { %> 
+                    <div class = "empty">
+                    <h1>Aun no hay productos en la base</h1>
+                    </div>
+                <% }  %>
+                <% for(let i = 0;i<productos.length || i>5;i++) { %>
+                <div class="articulos">
+                    <a href="/products/product?productID=<%= productos[i].id %>">
+                        <article class="carta">
+                            <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="IMG product">
+                            <div class="info">
+                                <span class="precio">$<%= productos[i].precio %></span>
+                                <span class="descripcion"> <%= productos[i].marca %> </span>           
+                            </div>
+                        </article>
+                    </a>
+                    <% } %>
+
+                </div>
+                </div>
+        </section>
+        <section class="productos">
+
+            <div class="carusel">
+                <div class="titulo">
+                    <span class="hvr-hang">Top 4</span>
+                </div>
+                <% if(productos.length == 0 || productos == undefined ) { %> 
+                    <div class = "empty">
+                    <h1>Aun no hay productos en la base</h1>
+                    </div>
+                <% }  %>
+                <% for(let i = 0;i<productos.length || i>5;i++) { %>
+                <div class="articulos">
+                    <a href="/products/product?productID=<%= productos[i].id %>">
+                        <article class="carta">
+                            <img src="../image/productsimages/<%= productos[i].imagen %>" width="100%" alt="IMG product">
+                            <div class="info">
+                                <span class="precio">$<%= productos[i].precio %></span>
+                                <span class="descripcion"> <%= productos[i].marca %> </span>           
+                            </div>
+                        </article>
+                    </a>
+                    <% } %>
+
+                </div>
+                </div>
+        </section>
+
+
+        <section class="categorias">
+            <h3 class="titulo">Las mas destacadas</h3>
+            <div class="categoria">
+                <a href="#"><img src="image/categorias/fixie.jpg"></a>
+                <h3>FIXIES</h3>
+            </div>
+
+            <div class="categoria">
+                <a href="#"><img src="image/categorias/mb.jpg"></a>
+                <h3>MOUNTIN BIKE</h3>
+            </div>
+
+            <div class="categoria">
+                <a href="#"><img src="image/categorias/kid.jpg"></a>
+                <h3>NIÑ@S</h3>
+            </div>
+
+            <div class="categoria">
+                <a href="#"><img src="image/categorias/race.jpg"></a>
+                <h3>RUTA</h3>
+            </div>
+        </section>
+
+        <br>
+        <br>
+            <%- include('partials/footer') %>
+
+
+
+
+
+    </body>
+
+</html>

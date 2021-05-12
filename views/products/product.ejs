@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/headercat') %>
+        <main>
+            <section class="sectionLeft">
+                <img src="../image/productsimages/<%=product.imagen %>" id="imagenPrincipal">
+                <div class="imagenesAbajo">
+                    <img src="../image/biciImgA.jpg" id="imagenSecundaria">
+                    <img src="../image/biciImgB.jpg" id="imagenSecundaria">
+                    <img src="../image/biciImgC.jpg" id="imagenSecundaria">
+                    <img src="../image/biciImgD.jpg" id="imagenSecundaria">
+                </div>
+                <p class="descripcionProducto">
+                    <%= product.desc1 %>
+                </p>
+            </section>
+            <section class="sectionRight">
+                <h1 class = "precio"> <%= product.marca + " " + product.modelo %></h1>
+                <h2 class ="desc2">  <%= product.desc2 %> </h2>
+                <h3> <%= product.precio %>$</h3>
+                <form action="" method="">
+                    <div class="caracteristicas">
+                        <select name="rodado" id="rodado">
+                            <% for(let i =0;i<product.rodados.length;i++) { %>
+                           
+                            <option value="<%= product.rodados[i] %>"> <%= product.rodados[i] %></option>
+                        <% } %>
+                        </select>
+                        <select name="color" id="color">
+                            <% for(let i =0;i<product.colores.length;i++) { %>
+                           
+                                <option value="<%= product.colores[i] %>"> <%= product.colores[i] %></option>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="counter">
+                        <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                        <input type="text" value="<%= product.stock %>">
+                        <span class="up"  onClick='increaseCount(event, this)'>+</span>
+                    </div>
+
+                    <button class="product-botton" >Agregar al carrito</button>
+                    <button class="product-botton"><a href="/products/edit/<%=product.id%>">Editar</a></button>
+
+
+
+                </form>
+                <h1 class="cuotas">Hasta <%= product.cuotas %> cuotas sin interes</h1>
+                <form action="/products/delete/<%=product.id%>?_method=DELETE" method ="POST">
+                    <button class="product-botton" >Delete</button>
+                </form>
+
+
+            </section>
+        </main>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

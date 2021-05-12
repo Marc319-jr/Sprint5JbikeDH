@@ -1,0 +1,52 @@
+
+    <footer class="text-center text-white" style="background: radial-gradient(circle, rgba(52,7,7,1) 0%, rgba(180,20,52,1) 100%);">
+        <!-- Grid container -->
+        <div class="container p-4">
+          <!-- Section: Iframe -->
+          <section class="">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-18">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    class="shadow-1-strong rounded"
+                    src="https://www.youtube.com/watch?v=h6t5eDe5gUE"
+                    title="Video Descenso Montaña"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Iframe -->
+        </div>
+        <!-- Grid container -->
+      
+        <section class="mb-4" style="background: radial-gradient(circle, rgba(52,7,7,1) 0%, rgba(180,20,52,1) 100%);">
+            <!-- Facebook -->
+            <a class="btn btn-secondary btn-floating m-1"  href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+      
+            <!-- Twitter -->
+            <a class="btn btn-secondary btn-floating m-1"  href="#!" role="button"><i class="fab fa-twitter"></i></a>
+      
+            <!-- Google -->
+            <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+      
+            <!-- Instagram -->
+            <a class="btn btn-secondary btn-floating m-1"  href="#!" role="button"><i class="fab fa-instagram"></i></a>
+      
+            <!-- Linkedin -->
+            <a class="btn btn-secondary btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn btn-secondary btn-floating m-1"  href="#!" role="button"><i class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
+
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: rgb(52,7,7);
+        background: radial-gradient(circle, rgba(52,7,7,1) 0%, rgba(180,20,52,1) 100%);">
+          © 2021 Copyright:
+          <a class="text-white" href="/">JBike</a>
+        </div>
+        <!-- Copyright -->
+      </footer>

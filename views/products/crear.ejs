@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/headercat') %>
+    <section class = "creacion">
+            <h1>Crearcion de producto</h1>
+            <form class = "creacion-producto" method="POST" action="/products/crear" enctype="multipart/form-data">
+                <span>Marca</span>
+                <input type = "text" name = "marcaProducto">
+                <span>Modelo</span>
+                <input type = "text" name = "modeloProducto">
+                <span>Ingrese descripcion bajo modelo</span>
+                <textarea name = "desc1" placeholder="Ingrese texto aqui"></textarea>
+                <span>Ingrese descripcion bajo fotos</span>
+                <textarea name = "desc2" placeholder="Ingrese texto aqui"></textarea>
+                <span>Coloque la foto principal</span>
+                <input name = "imagen" type = "file" class = "foto-principal" >
+                <span>Rodados</span>
+                <input type = "text" name = "rodadosProducto" placeholder="ej: 24,26,28">
+                <span>Colores</span>
+                <input type = "text" name = "coloresProducto" placeholder="ej: Amarillo,Negro,Blanco">
+                <span>Stock</span>
+                <input type = "number" name = "stockProducto" >
+                <span>Precio</span>
+                <input type = "number" name = "precioProducto">
+                <span>Descuento</span>
+                <input type = "number" name = "descuentoProducto">
+                <span>Cuotas</span>
+                <input type = "number" name = "cuotasProducto">
+
+                <div class="botones-creacion">
+                <button type="submit">Crear</button>
+                <button type="reset">Resetear</button>
+                </div>
+            </form>
+    </section>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

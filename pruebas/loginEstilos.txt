@@ -1,0 +1,187 @@
+/***************************************diseño login***************************/
+/*
+body{
+    align-items: center;
+}
+
+body .login-main{
+    margin:40px 20px;
+    padding: 20px 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+
+}
+
+body .login-main i{
+    font-size: 120px;
+    color: darkred;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 10px;
+    border-radius: 35px;
+    z-index: 2;
+    background-color: rgb(240, 240, 240);
+}
+
+body .texto-login{
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    max-width: 430px;
+    margin-bottom: -60px;
+}
+
+body .login{
+    margin: 60px 30px;
+    padding: 30px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.1);
+
+}
+
+body .login .ingreso{
+
+    align-items: center;
+}
+
+body .login .ingreso h3{
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+body .login .ingreso form input{
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 500px;
+
+}
+
+body .login-main .buttons{
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body .login-main .buttons a button {
+    width: 100%;
+    background-color: darkred;
+    color: white;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: darkred;
+    font-weight: 600;
+}
+
+
+
+@media screen and (min-width:1241px)
+
+{
+    body .login-main{
+        margin-top: 200px;
+    }
+}
+
+@media screen and (min-height: 1183px)
+{
+    body .login-main{margin-bottom: 250px}
+}
+*/
+
+
+
+/**********************************fin estilo log in******************/
+
+
+/**********************************estilo Sing in ********************/
+.body-register{
+    background-color: rgb(230,230,230);
+}
+
+body .register{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.3);
+    margin: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+    body  .register i{
+  
+    font-size: 120px;
+    color: darkred;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 30px 0;
+    border-radius: 35px;
+    z-index: 2;
+    }
+
+
+    body .register .forms{
+        display: flex;
+        flex-direction: column;
+        margin: 0 35px;
+        margin-bottom: 30px;
+        background-color: rgb(230,230,230);
+        border-radius: 6px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+        }
+
+        body .register .forms div{
+            padding:10px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+        }   
+
+     
+
+        body .register .forms div  input{
+            margin: 10px;
+            padding: 8px 10px;
+            border:1px solid rgb(230,230,230);
+            border-radius: 6px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+
+
+        }
+
+        body .register .forms div h6{
+            margin-top: 10px;
+            margin: 15px 10px;
+            padding: 5px;
+            margin-bottom: 0;
+
+        }
+
+   
+
+        body .register .forms span{
+            font-weight: bold;
+            font-size: 22px;
+            margin: auto;
+            padding: 5px 0;
+
+        }
+
+            body .register .forms .interes-usuario {
+                margin-top: 10px;
+                margin: 15px 10px;
+                padding: 5px;
+                margin-bottom: 0;
+            }

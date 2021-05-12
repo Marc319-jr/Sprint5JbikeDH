@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head') %>
+
+<body>
+    <header>
+
+        <div class="top-header">
+            
+            <div class="top">
+                <i class="fas fa-bars"></i>
+                <div class="logo2">
+                    <a href="/"><img class="logo2" src="../../image/Logos/Logophone.png" width="200px"></a>
+                    
+                </div>
+                <i class="fas fa-search"></i>
+    
+                <ul class="mainmenu">
+                    <li class="hvr-hang"><a href="#">ESHOP</a></li>
+                    <li class="hvr-hang"><a href="#">OFERTAS</a></li>
+                    <li class="hvr-hang"><a href="#">TU PROPIA AVENTURA</a></li>
+                    <li class="hvr-hang"><a href="#">CONTACTO</a></li>
+                    <li class="hvr-hang"><a href="#">NOSOTROS</a></li>
+                    <li class="hvr-hang"><a href="#">MARCAS</a></li>
+                </ul>
+    
+            </div>
+    
+            <div class="low">
+    
+                <div class="logo1">
+                    <a href="/"><img class="logo2" src="../../image/Logos/Logo.png" width="200px"></a>
+
+                </div>
+                <form class="search-bar">
+                    <input type="text" placeholder="Buscar producto">
+                    <i class="fas fa-search"></i>
+                </form>
+    
+                <div class="user ">
+                    <a href= "../users/login"><i class="fas fa-user hvr-bounce-out"></i></a>
+                    <a href = "../products/carrito"><i class="fas fa-shopping-cart hvr-bounce-out"></i></a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="low-header">
+            <br>
+            <div class="icons">
+                <div class="icono">
+                    <i class="fas fa-user"></i>
+                    <p>Usuario</p>
+                </div>
+    
+                <div class="icono">
+                    <i class="fas fa-bicycle"></i>
+                    <p>Productos</p>
+    
+                </div>
+    
+                <div class="icono">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Carrito</p>
+    
+                </div>
+    
+            </div>
+        </div>
+    
+    </header>
+    <section class = "creacion">
+            <h1>Edicion de producto</h1>
+            <form class = "creacion-producto" method="POST" action="/products/<%=product.id%>?_method=PUT" enctype="multipart/form-data">
+                <span>Marca</span>
+                <input type = "text" name = "marcaProducto"  value="<%= product.marca %>">
+                <span>Modelo</span>
+                <input type = "text" name = "modeloProducto"  value="<%= product.modelo %>"">
+                <span>Ingrese descripcion bajo modelo</span>
+                <textarea name = "desc1"><%= product.desc1 %></textarea>
+                <span>Ingrese descripcion bajo fotos</span>
+                <textarea name = "desc2"><%= product.desc2 %></textarea>
+                <span>Coloque la foto principal</span>
+                <input name = "imagen" type = "file" class = "foto-principal" >
+                <span>Rodados</span>
+                <input type = "text" name = "rodadosProducto" value="<%= product.rodados %>">
+                <span>Colores</span>
+                <input type = "text" name = "coloresProducto" value="<%= product.colores %>">
+                <span>Stock</span>
+                <input type = "number" name = "stockProducto" value="<%= product.stock %>" >
+                <span>Precio</span>
+                <input type = "number" name = "precioProducto" value="<%= product.precio %>">
+                <span>Descuento</span>
+                <input type = "number" name = "descuentoProducto" value="<%= product.descuento %>">
+                <span>Cuotas</span>
+                <input type = "number" name = "cuotasProducto" value="<%= product.cuotas %>">
+
+                <div class="botones-creacion">
+                <button type="submit">Editar</button>
+                <button type="reset">Resetear</button>
+                </div>
+            </form>
+           
+    </section>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+[
+    {
+        "id": 1,
+        "marca": "E-Bike Cube",
+        "modelo": "Full",
+        "desc1": "La E-Bike Cube full es lo ultimo de las bicicletas electricas, olvidate de tu moto auto o colectivo y preparate para una experiencia inolvidable. Verde inovadora y silenciosa la E-Bike full te hara evitar el transito y curzar ciudades en cuestiones de minutos, aun mas rapido que cualquier vehiculo o trasporte publico en hora pico",
+        "desc2": "Con una bateria de 48V y un potente motor la E-Bike Full tiene una autonomia de 55KM en la cidudad y supera velocidades de hasta 60KM/H",
+        "imagen": "producto-1620624937389.jpg",
+        "rodados": [
+            "26",
+            "29"
+        ],
+        "colores": [
+            "Blanco",
+            "Negro",
+            "Gris"
+        ],
+        "stock": "5",
+        "precio": "259000.00",
+        "descuento": "10",
+        "cuotas": "12"
+    },
+    {
+        "id": 2,
+        "marca": "E-Bike Cube",
+        "modelo": "Flex full",
+        "desc1": "De la casa de Cube otra excelente E-Bike esta vez plegable 100%\r\nEntra en cualquier baul o puede subrila a cualquier transporte publico",
+        "desc2": "Una bateria de 36V y un potente motor que permiten una atuonomia porteña de 35Km y velocidades de hasta 53KM/h ",
+        "imagen": "producto-1620625045890.jpg",
+        "rodados": [
+            "22",
+            "24",
+            "26"
+        ],
+        "colores": [
+            "Blanco",
+            "Gris"
+        ],
+        "stock": "10",
+        "precio": "129000.00",
+        "descuento": "10",
+        "cuotas": "12"
+    },
+    {
+        "id": 3,
+        "marca": "MB SantaCruz",
+        "modelo": "Flex full",
+        "desc1": "La nueva Santa Cruz con unos potentes amortiguadroes",
+        "desc2": "Frenos shimano mecanicos, 27 cambios Shimano 3*9 que permiten llegar a velocidades altas o esfurzar lo menos posible a la hora de subir una montaña",
+        "imagen": "producto-1620625146476.jpg",
+        "rodados": [
+            "29"
+        ],
+        "colores": [
+            "Naranja"
+        ],
+        "stock": "5",
+        "precio": "359000.00",
+        "descuento": "5",
+        "cuotas": "12"
+    },
+    {
+        "id": 4,
+        "marca": "MB Radon",
+        "modelo": "Flex full",
+        "desc1": "Una nueva bici de la casa de Radon que te hace llegar a nuevos limites!",
+        "desc2": "Frenos mecanicos a discos Shimano, 30 cambios 3*10 que te hacen sentir que hay un motor detras de ti ",
+        "imagen": "producto-1620625245706.jpg",
+        "rodados": [
+            "29"
+        ],
+        "colores": [
+            "Blanco",
+            "Negro"
+        ],
+        "stock": "20",
+        "precio": "222599.00",
+        "descuento": "25",
+        "cuotas": "16"
+    }
+]
