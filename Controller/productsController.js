@@ -1,8 +1,10 @@
+const path = require('path');
 const fs = require ('fs');
+const file = path.resolve(__dirname, '../data/', 'productos.JSON');
 const controller = {
     product: (req,res) => {
         console.log("renderizando al producto: ");
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {
@@ -31,7 +33,7 @@ const controller = {
 
     guardar:(req,res) => {
         console.log("creando un producto");
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'});
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'});
         let productos;
         if(archivoProductos == "")
         {
@@ -63,13 +65,13 @@ const controller = {
         productos.push(producto);
         console.log("genero un nuevo producto a la lista");
         let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync('productos.json', productosJSON);
+        fs.writeFileSync(file, productosJSON);
         res.redirect("/");
     },
     edit:(req,res) => {
         console.log("Editando un producto");
         let id = req.params.id;
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {
@@ -86,7 +88,7 @@ const controller = {
     },
     update: (req,res) => {
         
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {
@@ -114,12 +116,12 @@ const controller = {
         console.log("prodcuto editado: ");
         console.log(productos[posicion]);
         let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync('productos.json', productosJSON);
+        fs.writeFileSync(file, productosJSON);
         res.redirect("/");
     },
     delete: (req,res) => {
         console.log("Este es el delete del producot: "+ req.params.id);
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {
@@ -145,7 +147,7 @@ const controller = {
         }
         console.log(productsDelete);
         let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync('productos.json', productosJSON);
+        fs.writeFileSync(file, productosJSON);
         res.redirect("/");
 
 

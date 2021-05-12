@@ -1,8 +1,10 @@
-fs = require('fs');
+const path = require('path');
+let fs =require('fs');
+const file = path.resolve(__dirname, '../data/', 'productos.JSON');
 const controller = {
     index : (req,res) => {
         console.log("renderizando al index");
-        let archivoProductos = fs.readFileSync('productos.json', {enconding: 'utf-8'}); 
+        let archivoProductos = fs.readFileSync(file, {enconding: 'utf-8'}); 
         let productos;
         if(archivoProductos == "")
         {
