@@ -1,5 +1,7 @@
 let fs =require('fs');
 const { Recoverable } = require('repl');
+let bcrypt = require('bcryptjs');
+
 const controller = {
     //tenemos los render a las paginas
     login: (req,res) => {
@@ -28,10 +30,9 @@ const controller = {
             id: usuarios.length+1,
             nombre: req.body.nombreUsuario,
             genero: req.body.genero,
+            imagen: req.file ? req.file.filename : '',
             email: req.body.emailUsuario,
-            password: req.body.passwordUsuario,
-
-
+            password: bcrypt.hashSync(req.body.passwordUsuario , 10)
         };
         console.log(usuario);
 
