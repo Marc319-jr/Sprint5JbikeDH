@@ -32,19 +32,37 @@
     
                     <h3>Crear una cuenta</h3>
                     <form action="/users/register" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="nombreUsuario" placeholder="Nombre y Apellido" class="form-control" required>
+                        <% if (locals.errores && errores.nombreUsuario) { %>
+                            <p class="error"> <%= errores.nombreUsuario.msg  %> ! </p>
+                        <% } %>
+                        <input type="text" name="nombreUsuario" placeholder="Nombre y Apellido" value = "<%= locals.oldData ? oldData.nombreUsuario : null  %>" class="form-control" required>
                         <span>Seleccione genero</span>
                         <br>
                         <select name="genero" class="form-control">
-                            <option >Hombre</option>
-                            <option >Mujer</option>
+                            <option value ="" >Eliga una opcion</option>
+                            <% let opciones = ['Hombre' , 'Mujer'] %>
+                            <% for(let i = 0;i<opciones.length;i++ ) { %>
+                                <option value = "<%= opciones[i] %>" <%= locals.oldData && (opciones[i] === oldData.genero) ? 'selected' : null %>> <%= opciones[i] %> </option>
+                            <% } %>
                         </select>
-                        <br>
+                        <% if (locals.errores && errores.genero) { %>
+                            <p class="error"> <%= errores.genero.msg  %> ! </p>
+                        <% } %>
+                   
                         <label for = "imagen">Ingrese su imagen de perfil</label>
                         <input type="file" name = "imagen">
-                        <br>
-                        <input type="email" name="emailUsuario" placeholder="Correo electronico" class="form-control" required>
-                        <input type="password" name="passwordUsuario" placeholder="Contraseña" class="form-control">   
+                        <% if (locals.errores && errores.imagen) { %>
+                            <p class="error"> <%= errores.imagen.msg  %> ! </p>
+                        <% } %>
+                        <input type="email" name="emailUsuario" placeholder="Correo electronico" class="form-control" required >
+                        <% if (locals.errores && errores.emailUsuario) { %>
+                            <p class="error"> <%= errores.emailUsuario.msg  %> ! </p>
+                        <% } %>
+
+                        <input type="password" name="passwordUsuario" placeholder="Contraseña" class="form-control"> 
+                        <% if (locals.errores && errores.passwordUsuario) { %>
+                            <p class="error"> <%= errores.passwordUsuario.msg  %> ! </p>
+                        <% } %>  
                     <div class="buttons">
                         <a href="/index"></a>   
                             <button type = "submit" class="login-botton">

@@ -1,8 +1,13 @@
+//const { Recoverable } = require('repl');
+//1. Validar la registracion
+//2. 
 const path = require('path');
-const file = path.resolve(__dirname, '../data/', 'usuarios.JSON');
+//const file = path.resolve(__dirname, '../data/', 'usuarios.JSON');
 let fs =require('fs');
-const { Recoverable } = require('repl');
 let bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
+
+const User = require('../models/User')
 
 const controller = {
     //tenemos los render a las paginas
@@ -13,36 +18,22 @@ const controller = {
         res.render('./users/register')
     },
     create: (req,res) => {
-        let archivoUsuarios = fs.readFileSync(file, {enconding: 'utf-8'});
-        let usuarios; 
-        if (archivoUsuarios == "")
+        //Validaciones:
+        console.log("creando un usuario:");
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0)
         {
-            usuarios = [];
-            console.log("Lei un array de usuarios que esta vacio");
+            console.log("Hay errores asi que voy a requerir de algunas validaciones");
+            return res.render("./users/register" , {errores: resultValidation.mapped() , oldData: req.body})
         }
-        else 
-        {
-            usuarios = JSON.parse(archivoUsuarios);
-            console.log("Lei del archivo alumnos informacion");
-        }
-        console.log("Creando un usuario con la siguiente info: ");
-        console.log(req.body);
-
-        let usuario = {
-            id: usuarios.length+1,
-            nombre: req.body.nombreUsuario,
-            genero: req.body.genero,
-            imagen: req.file ? req.file.filename : '',
-            email: req.body.emailUsuario,
-            password: bcrypt.hashSync(req.body.passwordUsuario , 10)
-        };
-        console.log(usuario);
-
-        usuarios.push(usuario);
-        console.log("guarde un nuevo usuario");
-
-        let usuariosJSON = JSON.stringify(usuarios);
-        fs.writeFileSync(file,usuariosJSON);
+            console.log("Ya no hay errores podemos ir a guardar el usuario");
+            let userToCreate = {
+                ...req.body,
+                passwordUsuario: bcrypt.hashSync(req.body.passwordUsuario , 10),
+                imagen: req.file ? req.file.filename : ''
+            }
+        console.log(userToCreate);
+        User.create(userToCreate);
         res.redirect('/');
     }
 }
