@@ -27,6 +27,11 @@ const User = {
       allUsers.push(newUser);
       fs.writeFileSync(this.fileName , JSON.stringify(allUsers,null ,' '))
       return newUser;
+    },
+    findByField: function(field , text){
+        let allusers = this.findAll();
+        let userFound = allusers.find(oneUser => oneUser[field] === text);
+        return userFound;
     }
 }
 

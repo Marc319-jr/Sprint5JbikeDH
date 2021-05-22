@@ -2,6 +2,7 @@ const express = require('express');
 const color = require('colors');
 const path = require('path');
 const app = express();
+const session = require('express-session');
 app.use(express.static('public'));
 app.use(express.static('data'));
 
@@ -15,6 +16,12 @@ app.use(express.json());
 //Declaraciones necesarias para PUT Y DELETE
 const methodOverrider = require('method-override');
 app.use(methodOverrider("_method"));
+
+//uso de session
+app.use(session({secret: 'Shh, Its a secret',
+                 resave: false,
+                 saveUninitialized: false}));
+
 
 
 //Los gerentes de ruteo

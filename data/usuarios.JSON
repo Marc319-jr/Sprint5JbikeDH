@@ -1,42 +1,18 @@
 [
  {
   "id": 1,
-  "nombre": "agustin vicchio",
+  "nombreUsuario": "Marce",
   "genero": "Hombre",
-  "email": "agustin@gmail.com",
-  "password": "123456"
+  "emailUsuario": "marcelo.sznek@gmail.com",
+  "passwordUsuario": "$2a$10$MaNyeFtBqzJVNla0pdzCqut/P9C7F/0BHX0d71Zlebxx9NKhjZ.wa",
+  "imagen": "usuario-1621549555892.jpeg"
  },
  {
   "id": 2,
-  "nombre": "Marcelo Ariel Sznek",
+  "nombreUsuario": "Agus",
   "genero": "Hombre",
-  "imagen": "usuario-1620856676595.png",
-  "email": "marcelo.sznek@gmail.com",
-  "password": "Marce112233"
- },
- {
-  "id": 3,
-  "nombre": "Marcelo Ariel Sznek",
-  "genero": "Hombre",
-  "imagen": "usuario-1620857583013.png",
-  "email": "marcelo.sznek@gmail.com",
-  "password": "$2a$10$jomGTEEO/QHKHVJROsTfC.YfBLsZmbRarFZyqX58N4fIgjnWdyvAm"
- },
- {
-  "id": 4,
-  "nombre": "Aver que pasa",
-  "genero": "Hombre",
-  "imagen": "usuario-1620859096632.jpg",
-  "email": "marce@quepasa.com",
-  "password": "$2a$10$ZfnY..t7Ch8E.u6j.ahR1uYmfqMXfPpTxELX62fhdoJG/tuqcYDHy"
- },
- {
-  "id": 5,
-  "nombreUsuario": "Marce Agus Lunes",
-  "genero": "Hombre",
-  "emailUsuario": "marcelo.sznek@gmail.com",
-  "passwordUsuario": "Ailin1997",
-  "password": "$2a$10$5m62VKBGXnSuEQeoqCXL2O0tdVS1gttLKDWl9hxAVWZBgp5jFDafm",
-  "imagen": "usuario-1621378835762.png"
+  "emailUsuario": "Agus@gmail.com",
+  "passwordUsuario": "$2a$10$1AzXEjNV/si.yoJ3k4x49uGtdpHGo.PbDOw902S6l4PoD8QPxOQaa",
+  "imagen": "usuario-1621550166623.jpeg"
  }
 ]

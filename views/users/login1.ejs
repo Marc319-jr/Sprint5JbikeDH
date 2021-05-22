@@ -32,8 +32,11 @@
             <div class="ingreso">
 
                 <h3>Ingresá a tu cuenta</h3>
-                <form action="/" method="POST">
-                        <input type="text" name="username" placeholder="Usuario" class="form-control"
+                <form action="/users/login" method="POST">
+                        <% if (locals.errores && errores.email) { %>
+                            <p><%= errores.email.msg %>  </p>
+                        <% } %>
+                        <input type="email" name="email" placeholder="email" class="form-control"
                             required>
                     
                         <input type="password" name="password" placeholder="Contraseña" class="form-control">

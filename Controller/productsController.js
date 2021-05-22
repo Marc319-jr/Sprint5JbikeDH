@@ -28,7 +28,7 @@ const controller = {
 
     carrito: (req,res) => {
         console.log("renderizando al carrito");
-        res.render('./products/carrito');
+        res.render('./products/carrito' , {'user' : req.session.userLogged});
     },
 
     guardar:(req,res) => {

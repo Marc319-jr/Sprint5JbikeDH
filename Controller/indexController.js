@@ -17,7 +17,7 @@ const controller = {
             productos = JSON.parse(archivoProductos);
         }
 
-        res.render('index', {'productos':productos});
+        res.render('index', {'productos':productos , 'user': req.session.userLogged});
     }
 }
 

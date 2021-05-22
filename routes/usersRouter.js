@@ -21,12 +21,15 @@ let fileUpload = multer({storage});
 // tenemos las rutas GET
 
 const validator = require('../middlewares/userValidator');
+const { userInfo } = require('os');
 
 router.get('/login' , usersController.login);
 router.get('/register' , usersController.register);
+router.get('/profile' , usersController.profile);
 
 //
 router.post('/register',fileUpload.single('imagen'),validator, usersController.create);
+router.post('/login' , usersController.processLogin);
 
 
 module.exports = router
