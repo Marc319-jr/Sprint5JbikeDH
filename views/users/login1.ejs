@@ -32,7 +32,7 @@
             <div class="ingreso">
 
                 <h3>Ingresá a tu cuenta</h3>
-                <form action="/users/login" method="POST">
+                <form action="/users/loginProcess" method="POST">
                         <% if (locals.errores && errores.email) { %>
                             <p><%= errores.email.msg %>  </p>
                         <% } %>
@@ -40,6 +40,9 @@
                             required>
                     
                         <input type="password" name="password" placeholder="Contraseña" class="form-control">
+                        <label for="recordar">Recordar usuario</label>
+                        <input type="checkbox" name = "recordar">
+                        <br>
                         <a href = "#">No recuerdo mi Contraseña</a>
                     <div class="buttons">
                         <a href="/index">

@@ -13,9 +13,11 @@ const controller = {
     //tenemos los render a las paginas
     login: (req,res) => {
         console.log("login");
+        console.log(req.cookies.robando);
         res.render('./users/login1')
     },
     register: (req,res) => {
+        res.cookie('robando' , 'HolaQuerido!' , {maxAge: (1000 * 15)});
         console.log("register");
         res.render('./users/register')
     },
@@ -23,7 +25,6 @@ const controller = {
         console.log("profile");
         if(req.session.userLogged)
         res.render('./users/profile' , {'user' : req.session.userLogged})
-        else res.send("No hay ningun usuario logeado vuelva a intentar")
     },
     create: (req,res) => {
         //Validaciones:
@@ -54,7 +55,7 @@ const controller = {
             if(isOk){
                 console.log("Las contraseñas estan bien");
                 req.session.userLogged = userToLogin;
-                res.render('./users/profile' , {'user' : req.session.userLogged})
+                res.redirect('/users/profile')
             }
             else
             {
@@ -63,6 +64,14 @@ const controller = {
             }
         }
         res.render('./users/login1' , {errores: {email: {msg: "No existe tal usuario"}}})
+    },
+
+    logout: (req,res) => {
+        console.log("Cerrando session");
+        req.session.destroy(); //Borramos la seession
+        res.redirect('/')
+
+
     }
 }
 

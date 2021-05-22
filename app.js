@@ -2,9 +2,11 @@ const express = require('express');
 const color = require('colors');
 const path = require('path');
 const app = express();
+const cookies = require('cookie-parser');
 const session = require('express-session');
 app.use(express.static('public'));
 app.use(express.static('data'));
+
 
 
 
@@ -22,7 +24,18 @@ app.use(session({secret: 'Shh, Its a secret',
                  resave: false,
                  saveUninitialized: false}));
 
+//uso de cookies
 
+app.use(cookies());
+
+
+//middlwares
+
+const userloggedMiddleware = require('./middlewares/userloggedMiddleware');
+
+//Uso de middlewares
+
+app.use(userloggedMiddleware);
 
 //Los gerentes de ruteo
 const indexRouter = require('./routes/indexRouter');

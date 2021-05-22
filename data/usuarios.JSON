@@ -1,18 +1,10 @@
 [
  {
   "id": 1,
-  "nombreUsuario": "Marce",
+  "nombreUsuario": "Marcelo Sznek",
   "genero": "Hombre",
   "emailUsuario": "marcelo.sznek@gmail.com",
-  "passwordUsuario": "$2a$10$MaNyeFtBqzJVNla0pdzCqut/P9C7F/0BHX0d71Zlebxx9NKhjZ.wa",
-  "imagen": "usuario-1621549555892.jpeg"
- },
- {
-  "id": 2,
-  "nombreUsuario": "Agus",
-  "genero": "Hombre",
-  "emailUsuario": "Agus@gmail.com",
-  "passwordUsuario": "$2a$10$1AzXEjNV/si.yoJ3k4x49uGtdpHGo.PbDOw902S6l4PoD8QPxOQaa",
-  "imagen": "usuario-1621550166623.jpeg"
+  "passwordUsuario": "$2a$10$JwEUmayYQBeudjGqBeGY5.Ez/JQt17bLv95guaOFlMePGllyeFUu6",
+  "imagen": "usuario-1621705243172.jpeg"
  }
 ]
