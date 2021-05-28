@@ -7,7 +7,8 @@ let fs =require('fs');
 let bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const User = require('../models/User')
+const User = require('../models/User');
+const { isRegExp } = require('util');
 
 const controller = {
     //tenemos los render a las paginas
@@ -55,6 +56,9 @@ const controller = {
             if(isOk){
                 console.log("Las contraseñas estan bien");
                 req.session.userLogged = userToLogin;
+                if(req.body.recordar){
+                    res.cookie('usuarioCookie' , req.body.email , {maxAge : (1000 * 60 * 1)});
+                }
                 res.redirect('/users/profile')
             }
             else
@@ -68,6 +72,7 @@ const controller = {
 
     logout: (req,res) => {
         console.log("Cerrando session");
+        res.clearCookie('usuarioCookie');
         req.session.destroy(); //Borramos la seession
         res.redirect('/')
 

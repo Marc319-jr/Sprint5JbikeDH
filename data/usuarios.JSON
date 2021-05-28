@@ -6,5 +6,13 @@
   "emailUsuario": "marcelo.sznek@gmail.com",
   "passwordUsuario": "$2a$10$JwEUmayYQBeudjGqBeGY5.Ez/JQt17bLv95guaOFlMePGllyeFUu6",
   "imagen": "usuario-1621705243172.jpeg"
+ },
+ {
+  "id": 2,
+  "nombreUsuario": "Agus",
+  "genero": "Hombre",
+  "emailUsuario": "agus@gmail.com",
+  "passwordUsuario": "$2a$10$V6QNr2Hnm9XkOTyuBgV.xONBx17w1yPSShqnReOUGOfSO32JZWKwi",
+  "imagen": "usuario-1622158858289.jpeg"
  }
 ]
